@@ -1,0 +1,34 @@
+<div class="contenedor-filtros">
+    <div class="filtro">
+      <label for="filtroGenero">Género:</label>
+      <input type="text" id="filtroGenero" [(ngModel)]="filtroGenero" (input)="aplicarFiltros()">
+    </div>
+    <div class="filtro">
+      <label for="filtroAnio">Año de lanzamiento:</label>
+      <input type="number" id="filtroAnio" [(ngModel)]="filtroAnio" (input)="aplicarFiltros()">
+    </div>
+  </div>
+  
+  <table class="tabla-peliculas">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Género</th>
+        <th>Año de lanzamiento</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pelicula of peliculasFiltradas; let index = index" [class.odd]="index % 2 === 0">
+        <td>{{ pelicula.titulo }}</td>
+        <td>{{ pelicula.genero }}</td>
+        <td>{{ pelicula.lanzamiento }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div class="contenedor-boton">
+    <button class="boton-pdf" (click)="generarPDF()">Generar PDF</button>
+    <button class="boton-excel" (click)="exportarExcel()">Exportar a Excel</button>
+    <button class="boton-csv" (click)="exportarCSV()">Exportar a CSV</button>
+  </div>
+  

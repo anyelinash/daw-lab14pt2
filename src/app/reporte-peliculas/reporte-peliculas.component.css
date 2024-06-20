@@ -1,0 +1,90 @@
+.tabla-peliculas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tabla-peliculas th,
+  .tabla-peliculas td {
+    border: 1px solid #dddddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .tabla-peliculas th {
+    background-color: #007bff; /* Azul */
+    color: white;
+    text-align: center;
+  }
+  
+  .contenedor-filtros {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .filtro {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  /* Estilos para los filtros */
+  .filtro input[type="text"],
+  .filtro input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 20px; /* Filtros redondeados */
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .filtro input[type="text"]:focus,
+  .filtro input[type="number"]:focus {
+    outline: none;
+    border-color: #007bff; /* Cambia el borde al enfocar */
+  }
+  
+  .contenedor-boton {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .boton-pdf,
+  .boton-excel,
+  .boton-csv {
+    padding: 12px 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px; /* Botones redondeados */
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+  }
+  
+  .boton-pdf {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+  }
+  
+  .boton-excel {
+    background-color: #008CBA; /* Azul claro */
+    color: white;
+  }
+  
+  .boton-csv {
+    background-color: #f44336; /* Rojo */
+    color: white;
+  }
+  
+  .boton-pdf:hover,
+  .boton-excel:hover,
+  .boton-csv:hover {
+    opacity: 0.8;
+  }
+  
+  .odd {
+    background-color: #f9f9f9;
+  }
+  
